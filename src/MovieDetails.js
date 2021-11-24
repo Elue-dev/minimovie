@@ -30,7 +30,7 @@ export const MovieDetails = () => {
         <div className='movie_details'>
             <h2>Movie Details</h2>
             <div className='movie_img_container'>
-            <img className='movie_img' src ={`${imageUrl}${movie.poster_path}`}/>
+                <img className='movie_img' src ={`${imageUrl}${movie.poster_path}`}/>
             </div>
             <p><b>Movie Name:</b>{movie.original_title}</p>
             <p><b>Tagline:</b>{movie.tagline}</p>
