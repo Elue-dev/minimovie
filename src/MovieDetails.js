@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import './App.css'
+import config from './config'
 
 export const MovieDetails = () => {
-    const API_KEY = 'fec8b5ab27b292a68294261bb21b04a5'
+    // const API_KEY = 'fec8b5ab27b292a68294261bb21b04a5'
     const params = useParams()
 
     useEffect(() => {
@@ -14,7 +15,7 @@ export const MovieDetails = () => {
     const [movie, setMovie] = useState([])
 
     const movieDetails = async () => {
-        const movieData = await fetch (`https://api.themoviedb.org/3/movie/${params.id}?api_key=${API_KEY}`)
+        const movieData = await fetch (`https://api.themoviedb.org/3/movie/${params.id}?api_key=${config.API_KEY}`)
         const response = await movieData.json()
         console.log(response)
         setMovie(response)

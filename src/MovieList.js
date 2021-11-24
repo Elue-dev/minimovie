@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import config from './config'
 import './App.css'
 
 
 export const MovieList = () => {
     const [movies, setMovies] = useState([])
-
-    const API_KEY = 'fec8b5ab27b292a68294261bb21b04a5'
-
 
     useEffect(() => {
         fetchMovies()
@@ -15,7 +13,7 @@ export const MovieList = () => {
 
 
     const fetchMovies = async () => {
-        const data = await fetch (`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`)
+        const data = await fetch (`https://api.themoviedb.org/3/movie/now_playing?api_key=${config.API_KEY}`)
         const apiResponse = await data.json()
         console.log(apiResponse)
         setMovies(apiResponse.results)
