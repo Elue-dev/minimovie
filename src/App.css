@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400;500&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
+  color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie_card{
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+  width: 400px;
+  height: 480px;
+  border-radius: .6rem;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+  max-width: 1300px;
+  margin: auto;
+  width: 90%;
+  margin-top: 2rem;
+}
+
+.movie_card h3{
+  padding: .5rem;
+}
+
+.movie_card_image{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+img{
+  width: 100%;
+  height: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.movie_img{
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.movie_details{
+    max-width: 1300px;
+    margin: auto;
+    width: 90%;
+}
+
+.movie_details img{
+  border-radius: .7rem;
+}
+
+b{
+  margin-right: .5rem;
+}
+
+@media (max-width:500px){
+  .movie{
+    display: grid;
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
