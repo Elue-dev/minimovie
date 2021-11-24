@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
 
+
 export const MovieList = () => {
     const [movies, setMovies] = useState([])
 
@@ -26,7 +27,7 @@ export const MovieList = () => {
 
     return (
         <div className='movie'>
-            <h1>Number of Movies: {movies.length}</h1>
+            <h2>Number of Movies: {movies.length}</h2>
             {movies.map(movie => (
                 <div className='movie_card' key={movie.id}>
                     <Link to={`/movie/${movie.id}`}>
