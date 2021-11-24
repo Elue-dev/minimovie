@@ -4,7 +4,6 @@ import './App.css'
 import config from './config'
 
 export const MovieDetails = () => {
-    // const API_KEY = 'fec8b5ab27b292a68294261bb21b04a5'
     const params = useParams()
 
     useEffect(() => {
@@ -30,7 +29,9 @@ export const MovieDetails = () => {
     return (
         <div className='movie_details'>
             <h2>Movie Details</h2>
+            <div className='movie_img_container'>
             <img className='movie_img' src ={`${imageUrl}${movie.poster_path}`}/>
+            </div>
             <p><b>Movie Name:</b>{movie.original_title}</p>
             <p><b>Tagline:</b>{movie.tagline}</p>
             <p><b>Genre:</b>{movie.genres[0].name}</p>

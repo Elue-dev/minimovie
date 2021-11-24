@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400;500&display=swap');
 
+*{
+  line-height: 2;
+}
+
 body{
   font-family: 'Poppins', sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -26,6 +30,14 @@ a{
   margin: auto;
   width: 90%;
   margin-top: 2rem;
+}
+
+.movie h2{
+  color: rgb(11, 141, 173);
+}
+
+.movie h2 span{
+  color: #000;
 }
 
 .movie_card h3{
@@ -57,25 +69,19 @@ img{
 
 .movie_details h2{
   margin-bottom: 2rem;
+  color: rgb(11, 141, 173);
 }
-
-/* .movie_details h2::before{
-  content: '';
-  position: absolute;
-  background-color: rgb(31, 99, 131);
-  width: 80px;
-  height: 4px;
-  top: 50px;
-  left: 20%;
-  transform: translateX(-50%);
-} */
 
 .movie_details img{
   border-radius: .7rem;
+  margin-bottom: 2rem;
+  box-shadow: 5px 8px 10px rgba(0,0,0,0.5);
+  border: 2px dashed rgba(0,0,0,0.7);
 }
 
 b{
   margin-right: .5rem;
+  color: rgb(11, 141, 173);
 }
 
 @media (max-width:800px){
@@ -116,5 +122,11 @@ b{
 
   .movie_img {
     width: 360px;
+  }
+
+  .movie_img_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

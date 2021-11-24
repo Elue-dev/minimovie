@@ -25,7 +25,7 @@ export const MovieList = () => {
 
     return (
         <div className='movie'>
-            <h2>Number of Movies: {movies.length}</h2>
+            <h2>Number of Movies: <span>{movies.length}</span></h2>
             {movies.map(movie => (
                 <div className='movie_card' key={movie.id}>
                     <Link to={`/${movie.id}`}>
