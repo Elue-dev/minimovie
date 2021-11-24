@@ -13,7 +13,7 @@ a{
 .movie_card{
   box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
   width: 400px;
-  height: 480px;
+  height: 490px;
   border-radius: .6rem;
   overflow: hidden;
 }
@@ -107,6 +107,7 @@ b{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 4rem;
   }
 
   .movie_card {

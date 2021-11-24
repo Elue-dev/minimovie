@@ -11,16 +11,16 @@ export const MovieDetails = () => {
     },[])
     
 
-    const [item, setItem] = useState([])
+    const [movie, setMovie] = useState([])
 
     const movieDetails = async () => {
-        const movieData = await fetch (`https://api.themoviedb.org/3/movie/${params.movieId}?api_key=${API_KEY}`)
+        const movieData = await fetch (`https://api.themoviedb.org/3/movie/${params.id}?api_key=${API_KEY}`)
         const response = await movieData.json()
         console.log(response)
-        setItem(response)
+        setMovie(response)
     }
 
-    if(item.title === undefined){
+    if(movie.title === undefined){
         return <h1 className='loader'>Loading....</h1>
     }
 
@@ -29,14 +29,14 @@ export const MovieDetails = () => {
     return (
         <div className='movie_details'>
             <h2>Movie Details</h2>
-            <img className='movie_img' src ={`${imageUrl}${item.poster_path}`}/>
-            <p><b>Movie Name:</b>{item.original_title}</p>
-            <p><b>Tagline:</b>{item.tagline}</p>
-            <p><b>Genre:</b>{item.genres[0].name}</p>
-            <p><b>Release Date:</b>{item.release_date}</p>
-            <p><b>Production Company:</b>{item.production_companies[0].name}</p>
-            <p><b>Production Country:</b>{item.production_countries[0].name}</p>
-            <p><b>Movie Overview:</b>{item.overview}</p>
+            <img className='movie_img' src ={`${imageUrl}${movie.poster_path}`}/>
+            <p><b>Movie Name:</b>{movie.original_title}</p>
+            <p><b>Tagline:</b>{movie.tagline}</p>
+            <p><b>Genre:</b>{movie.genres[0].name}</p>
+            <p><b>Release Date:</b>{movie.release_date}</p>
+            <p><b>Production Company:</b>{movie.production_companies[0].name}</p>
+            <p><b>Production Country:</b>{movie.production_countries[0].name}</p>
+            <p><b>Movie Overview:</b>{movie.overview}</p>
         </div>
     )
 }

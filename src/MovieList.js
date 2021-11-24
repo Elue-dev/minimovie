@@ -30,7 +30,7 @@ export const MovieList = () => {
             <h2>Number of Movies: {movies.length}</h2>
             {movies.map(movie => (
                 <div className='movie_card' key={movie.id}>
-                    <Link to={`/movie/${movie.id}`}>
+                    <Link to={`/${movie.id}`}>
                         <div className='movie_card_image'>
                             <img src={`${imageUrl}${movie.poster_path}`}/>
                         </div>
